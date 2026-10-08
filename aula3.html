@@ -28,7 +28,7 @@
     <p id="ex4">4 - Alterar a cor do id "ex1", do segundo item da classe "comandos" para verde.</p>
     <p id="ex5">5 - Colocar uma borda na div com o querySelector</p>
     <p id="ex6">6 - Alterar o tamanho do texto do primeiro exercício utilizando o querySelector.</p>
-    <p id="ex7">7 - </p>
+    <p id="ex7">7 - Alterar o texto para negrito do elemento da primeira classe "comandos" utilizando o querySlector</p>
   </div>
 
   <script>
@@ -51,11 +51,11 @@
     document.querySelector("div").style.border = "3px dashed red";
 
     //6
-    //document.querySelector("#ex1").style.fontSize = "30px"; ou ->
-    document.querySelector("#div p").style.fontSize = "30px"; //O querySelector só seleciona o primeiro (ou o único que tiver)
+    document.querySelector("#ex1").style.fontSize = "30px"; 
+    //document.querySelector("#div p").style.fontSize = "30px"; //O querySelector só seleciona o primeiro (ou o único que tiver)
 
     //7
-    
+     document.querySelector(".comandos").style.fontWeight = "bold";
 
   </script>
 
