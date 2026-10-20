@@ -5,6 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .contador p {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: green;
+      border: 1px solid;
+      font-size: 22px;
+      padding: 10px
+    }
+  </style>
 </head>
 
 <body>
@@ -36,7 +47,12 @@
     <p id="ex8">8 - Alterar a div: arredondar as bordas, cor de fundo rosa claro, cor do texto vermelho.</p>
     <p id="ex9">9 - Alterar os exercícios 1 e 2 para variáveis.</p>
     <p id="ex10">10 - Colocar os botões para funcionar</p>
-    <p id="ex11">11 - Inserir um evento para quando passar o mouse por cima: inserir uma borda e cor de fundo no "Aula 4 - Javascript DOM", e quando o mouse sair: voltar ao estado original.<br></p>
+    <p id="ex11">11 - Inserir um evento para quando passar o mouse por cima: inserir uma borda e cor de fundo no "Aula 4
+      - Javascript DOM", e quando o mouse sair: voltar ao estado original.<br></p>
+    <p id="ex12">12 - Fazer um contador de visitas para o site.</p>
+    <div class="contador">
+      <p class="contador">1</p>
+    </div>
   </div>
 
   <script>
@@ -49,17 +65,21 @@
       document.querySelectorAll("div")[0].style.display = "block";
     });
 
-   //11
-   let texto = document.querySelectorAll("#titulo")[0];
-   texto.addEventListener("mouseover", function(){
-    texto.style.border = "2px dashed red";
-    texto.style.backgroundColor = "lightblue";
-   })
-   texto.addEventListener("mouseout", function(){
-    texto.style.border = "none";
-    texto.style.backgroundColor = "white";
-   })
+    //11
+    let texto = document.querySelectorAll("#titulo")[0];
+    texto.addEventListener("mouseover", function () {
+      texto.style.border = "2px dashed red";
+      texto.style.backgroundColor = "lightblue";
+    })
+    texto.addEventListener("mouseout", function () {
+      texto.style.border = "none";
+      texto.style.backgroundColor = "white";
+    })
 
+    let contador = document.querySelectorAll(".contador")[1].innerHTML;
+    contador++;
+    console.log(contador);
+    document.querySelectorAll(".contador")[1].innerHTML = contador;
   </script>
 
 </body>
