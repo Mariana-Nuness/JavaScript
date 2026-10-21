@@ -49,6 +49,14 @@ tamanho atual da imagem.
       document.querySelectorAll("img").style.width = "30px";
     })
 
+    let btRedefinir = document.createElement("button");
+    btRedefinir.textContent = "Redefinir";
+    document.body.appendChild(btRedefinir);
+
+    btRedefinir.addEventListener("click", function () {
+      foto.width = 200;
+      tam.innerHTML = foto.width;
+    })
 
   </script>
 
