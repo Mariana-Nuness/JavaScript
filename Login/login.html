@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Início</title>
+    <title>Login</title>
 </head>
 <body>
-    <h1 id="mensagem"></h1>
-    <a href="perfil.html">Ir para o perfil</a>
+    <h1>Login</h1>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button onclick="entrar()">Entrar</button>
 
     <script>
-        let usuario = localStorage.getItem("usuario");
-        if (usuario === "") {
-            window.location.href = "login.html";
-        } else {
-            document.getElementById("mensagem").textContent =
-                "Bem-vindo, " + usuario + "!";
+        function entrar() {
+            let nome = document.getElementById("nome").value;
+            localStorage.setItem("usuario", nome);
+            window.location.href = "inicio.html";
         }
     </script>
 </body>
